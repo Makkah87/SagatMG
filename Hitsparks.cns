@@ -1,0 +1,450 @@
+;=================================================
+;Light Hitspark
+;=================================================
+[Statedef 8000]
+type    = S
+physics = N
+velset = 0,0
+anim = 8000
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8000, Hitsound Punch]
+type = playsnd
+trigger1 = !time && (parent,stateno = 200 || parent, stateno = 400 || parent, stateno = 600)
+trigger2 = !time && (parent,prevstateno = 200 || parent, prevstateno = 400 || parent, prevstateno = 600)
+trigger2 = parent,movetype = H
+value = 250, 3
+volume = 255
+channel = 5
+
+[State 8000, Hitsound Kick]
+type = playsnd
+trigger1 = !time && (parent,stateno = 230 || parent, stateno = 430 || parent, stateno = 630)
+trigger2 = !time && (parent,prevstateno = 230 || parent, prevstateno = 430 || parent, prevstateno = 630)
+trigger2 = parent,movetype = H
+value = 300, 0
+volume = 255
+channel = 5
+
+[State 8000, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1061, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 6001, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+;=================================================
+;Medium Hitspark
+;=================================================
+[Statedef 8001]
+type    = S
+physics = N
+velset = 0,0
+anim = 8001
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8001, Hitsound Punch]
+type = playsnd
+trigger1 = !time && (parent,stateno = 210 || parent, stateno = 410 || parent, stateno = 610)
+trigger2 = !time && (parent,prevstateno = 210 || parent, prevstateno = 410 || parent, prevstateno = 610)
+trigger2 = parent,movetype = H
+value = 250, 4
+volume = 255
+channel = 5
+
+[State 8001, Hitsound Kick]
+type = playsnd
+trigger1 = !time && (parent,stateno = 240 || parent, stateno = 440 || parent, stateno = 640)
+trigger2 = !time && (parent,prevstateno = 240 || parent, prevstateno = 440 || parent, prevstateno = 640)
+trigger2 = parent,movetype = H
+value = 300, 1
+volume = 255
+channel = 5
+
+[State 8001, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8001, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8001, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+;=================================================
+;Strong Hitspark
+;=================================================
+[Statedef 8002]
+type    = S
+physics = N
+velset = 0,0
+anim = 8002
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8002, Hitsound Punch]
+type = playsnd
+trigger1 = !time && (parent,stateno = 220 || parent, stateno = 420 || parent, stateno = 620)
+trigger2 = !time && parent, stateno = 702
+trigger3 = !time && (parent,prevstateno = 240 || parent, prevstateno = 440 || parent, prevstateno = 640)
+trigger3 = parent,movetype = H
+value = 250, 6
+volume = 255
+channel = 5
+
+[State 8002, Hitsound Kick]
+type = playsnd
+trigger1 = !time && (parent,stateno = 250 || parent, stateno = 450 || parent, stateno = 650)
+trigger2 = !time && parent, stateno = 701
+trigger3 = !time && (parent,prevstateno = 250 || parent, prevstateno = 450 || parent, prevstateno = 650)
+trigger3 = parent,movetype = H
+value = 300, 2
+volume = 255
+channel = 5
+
+[State 8002, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8002, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8002, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+;=================================================
+;Special Hitspark
+;=================================================
+[Statedef 8010]
+type    = S
+physics = N
+velset = 0,0
+anim = 8003
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8000, Scale]
+type = angledraw
+trigger1 = 1
+value = 0
+scale = 0.8, 0.8
+
+[State 8010, Hitsound Punch]
+type = playsnd
+triggerall = !winko
+trigger1 = !time && (parent,stateno = [1000, 1021])
+trigger2 = parent,movetype = H
+trigger2 = !time && (parent,prevstateno = [1000, 1021])
+value = 250, 6
+volume = 255
+channel = 5
+
+[State 8010, KO Hitsound Punch]
+type = playsnd
+triggerall = winko
+trigger1 = !time
+value = 250, 7
+volume = 255
+channel = 5
+
+[State 8010, Hitsound Kick]
+type = playsnd
+triggerall = !winko
+trigger1 = !time && (parent,stateno = [1030, 1050])
+trigger2 = parent,movetype = H
+trigger2 = !time && (parent,prevstateno = [1030, 1050])
+value = 300, 2
+volume = 255
+channel = 5
+
+[State 8010, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8010, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8010, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+;=================================================
+;Hyper Hitspark
+;=================================================
+[Statedef 8011]
+type    = S
+physics = N
+velset = 0,0
+anim = 8003
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8011, Scale]
+type = angledraw
+trigger1 = 1
+value = 0
+scale = 1, 1
+
+[State 8011, Hitsound Punch]
+type = playsnd
+triggerall = !winko
+trigger1 = !time && (parent,stateno = 3012 || parent, stateno = 3532 || parent, stateno = 3535)
+trigger2 = parent, movetype = h
+trigger2 = !time && (parent,prevstateno = 3012 || parent, prevstateno = 3532 || parent, prevstateno = 3535) 
+value = 250, 6
+volume = 255
+channel = 5
+
+[State 8011, KO Hitsound Punch]
+type = playsnd
+triggerall = winko
+trigger1 = !time
+value = 250, 7
+volume = 255
+channel = 5
+
+[State 8011, Hitsound Kick]
+type = playsnd
+triggerall = !winko
+trigger1 = !time && (parent,stateno = 3010 || parent, stateno = 3530 || parent, stateno = 3020 || parent, stateno = 3520)
+trigger2 = parent, movetype = h
+trigger2 = !time && (parent,prevstateno = 3010 || parent, prevstateno = 3530 || parent, prevstateno = 3020 || parent, prevstateno = 3520)
+value = 300, 2
+volume = 255
+channel = 5
+
+[State 8011, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8011, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8011, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+;=================================================
+;Light Guardspark
+;=================================================
+[Statedef 8030]
+type    = S
+physics = N
+velset = 0,0
+anim = 8030
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8030, Hitsound Punch]
+type = playsnd
+trigger1 = !time
+value = 300, 3
+volume = 255
+channel = 5
+
+[State 8030, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8030, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8030, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+;=================================================
+;Medium Guardspark
+;=================================================
+[Statedef 8031]
+type    = S
+physics = N
+velset = 0,0
+anim = 8031
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8031, Hitsound Punch]
+type = playsnd
+trigger1 = !time
+value = 300, 3
+volume = 255
+channel = 5
+
+[State 8031, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8031, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8031, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+;=================================================
+;Strong Guardspark
+;=================================================
+[Statedef 8032]
+type    = S
+physics = N
+velset = 0,0
+anim = 8032
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8032, Hitsound Punch]
+type = playsnd
+trigger1 = !time
+value = 300, 3
+volume = 255
+channel = 5
+
+[State 8032, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8032, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8032, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+
+;=================================================
+;Special Guardspark
+;=================================================
+[Statedef 8033]
+type    = S
+physics = N
+velset = 0,0
+anim = 8033
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8033, Guardshake]
+type = envshake
+trigger1 = time = 0
+time = 4
+ampl = 6
+freq = 176
+ignorehitpause = 1
+
+[State 8033, Scale]
+type = angledraw
+trigger1 = 1
+value = 0
+scale = 0.8, 0.8
+
+[State 8033, Hitsound Punch]
+type = playsnd
+trigger1 = !time
+value = 300, 3
+volume = 255
+channel = 5
+
+[State 8033, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8033, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8033, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+;=================================================
+;Hyper Guardspark
+;=================================================
+[Statedef 8034]
+type    = S
+physics = N
+velset = 0,0
+anim = 8033
+ctrl = 0
+sprpriority = 6
+ignorehitpause = 0
+
+[State 8034, Guardshake]
+type = envshake
+trigger1 = time = 0
+time = 4
+ampl = 6
+freq = 176
+ignorehitpause = 1
+
+[State 8034, Scale]
+type = angledraw
+trigger1 = 1
+value = 0
+scale = 1,1
+
+[State 8034, Hitsound Punch]
+type = playsnd
+trigger1 = !time
+value = 300, 3
+volume = 255
+channel = 5
+
+[State 8034, NoShadow]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 8034, Trans]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 8034, Harakiri]
+type = destroyself
+trigger1 = animtime = 0
+
+
+

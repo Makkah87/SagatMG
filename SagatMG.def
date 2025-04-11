@@ -1,0 +1,42 @@
+; Definition file for Sagat
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "SagatMG"            ;Name of character
+displayname = "Sagat"       ;Name of character to display
+versiondate = 12.01.2022    ;Version date of character (MM-DD-YYYY)
+mugenversion = 1.0   ;Version of M.U.G.E.N character works on
+author = "Master Gouken"    ;Character author name
+pal.defaults = 6,3,4,2      ;Default palettes in order of preference
+localcoord = 320,240
+
+; Files for the player
+[Files]
+cmd     = Sagat.cmd   ;Command set
+cns     = Sagat.cns   ;Constants
+st      = Sagat.cns   ;States
+st1	= Super.cns   ;Super Art Effects
+st2	= Flames.cns  ;Fire 'n shit
+st3	= Hitsparks.cns
+stcommon = common1.cns   ;Common states
+sprite  = Sagat.sff   ;Sprite
+anim    = Sagat.air   ;Animation
+sound   = Sagat.snd   ;Sound
+pal1    = Sagat1.act  ;Palettes
+pal2    = Sagat2.act
+pal3	= Sagat3.act
+pal4	= Sagat4.act
+pal5	= Sagat5.act
+pal6	= Sagat6.act
+pal7	= Sagat7.act
+pal8	= Sagat8.act
+pal9	= Sagat9.act
+pal10	= Sagat10.act
+pal11	= Sagat11.act
+pal12	= Sagat12.act
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

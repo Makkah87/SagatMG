@@ -1,0 +1,176 @@
+;======================================================================
+; Burn Effect -ãÛíÜÇÃçUåÇ-
+;======================================================================
+[Statedef  8100]
+anim = -1
+
+[State 8100, nohit]
+type = nothitby
+trigger1 = 1
+value = SCA
+
+[State 8100, UNoC]
+type = AssertSpecial
+trigger1 = 1
+flag = invisible
+
+[State 8100, TiesThatBind]
+type = posset
+trigger1 = 1
+x = (enemy, pos x)+10
+y = (enemy, pos y)-52  ;-58
+
+[State 8100, flamecenter]
+type = Explod
+trigger1 = timemod = 4,2
+anim = 8100
+id = 8100
+postype = p1
+sprpriority = ifelse(random<= 500,5,-5)
+scale = 0.70,0.70
+
+[State 8100, flameleft]
+type = Explod
+trigger1 = timemod = 4,5
+anim = 8100
+id = 8100
+pos = 30, 0
+postype = p1
+sprpriority = ifelse(random<= 500,5,-5)
+scale = 0.70,0.70
+
+[State 8100, flameright]
+type = Explod
+trigger1 = timemod = 4,3
+anim = 8100
+id = 8100
+pos = -30,0
+postype = p1
+sprpriority = ifelse(random<= 500,5,-5)
+scale = 0.70,0.70
+
+[State 8100, Landflame]
+type = Explod
+trigger1 =  enemy, stateno = 5100
+anim = 8100
+id = 8100
+pos = -40,30
+postype = p1
+sprpriority = 5
+scale = 0.70,0.70
+
+[State 8100, Landflame2]
+type = Explod
+trigger1 =  enemy, stateno = 5100
+anim = 8100
+id = 8100
+pos = -20,30
+postype = p1
+sprpriority = 5
+scale = 0.70,0.70
+
+[State 8100, Landflame3]
+type = Explod
+trigger1 =  enemy, stateno = 5100
+anim = 8100
+id = 8100
+pos = 0,30
+postype = p1
+sprpriority = 5
+scale = 0.70,0.70
+
+[State 8100, SnuffOut]
+type = destroyself
+;trigger1 = time = 120
+trigger1 = enemy, stateno = 5100
+
+;======================================================================
+; Burn Effect -ínãÖÇÃçUåÇ
+;======================================================================
+[Statedef  8200]
+anim = -1
+
+[State 8200, not hit]
+type = nothitby
+trigger1 = 1
+value = SCA
+
+[State 8100, UNoC]
+type = AssertSpecial
+trigger1 = 1
+flag = invisible
+
+[State 8100, TiesThatBind]
+type = posset
+trigger1 = 1
+x = (enemy, pos x)+10
+y = (enemy, pos y)-70  ;-52
+
+[State 8100, flamecenter]
+type = Explod
+trigger1 = 1; timemod = 4,2
+anim = 8100
+id = 8100
+postype = p1
+sprpriority = ifelse(random<= 700,5,-5)
+scale = 0.50,0.50
+vel = 1.2,-3.5
+pos = -20+random%20*(ifelse(random < 500, -1,1)),0+random%-60
+
+[State 8100, flameleft]
+type = null;Explod
+trigger1 = timemod = 4,5
+anim = 8100
+id = 8100
+pos = 15, 0
+postype = p1
+sprpriority = ifelse(random<= 700,5,-5)
+scale = 0.50,0.50
+vel = 1.2,-3.5
+
+[State 8100, flameright]
+type = null ;Explod
+trigger1 = timemod = 4,3
+anim = 8100
+id = 8100
+pos = -15,0
+postype = p1
+sprpriority = ifelse(random<= 700,5,-5)
+scale = 0.50,0.50
+vel = 1.2,-3.5
+
+[State 8100, Landflame]
+type = Explod
+trigger1 =  enemy, stateno = 5100
+anim = 8100
+id = 8100
+pos = -40,30
+postype = p1
+sprpriority = 5
+scale = 0.50,0.50
+
+[State 8100, Landflame2]
+type = Explod
+trigger1 =  enemy, stateno = 5100
+anim = 8100
+id = 8100
+pos = -20,30
+postype = p1
+sprpriority = 5
+scale = 0.50,0.50
+
+[State 8100, Landflame3]
+type = Explod
+trigger1 =  enemy, stateno = 5100
+anim = 8100
+id = 8100
+pos = 0,30
+postype = p1
+sprpriority = 5
+scale = 0.50,0.50
+
+[State 8100, SnuffOut]
+type = destroyself
+trigger1 = time = 120
+trigger2 = enemy, stateno = 5100
+trigger3 = enemy, movetype != H
