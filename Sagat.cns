@@ -6441,7 +6441,7 @@ value = 0
 
 [State 3001, Hitdef]
 type = HitDef
-trigger1 = hitcount < 4 && parent, var(7) = 0
+trigger1 = hitcount < 4; && parent, var(7) = 0
 attr = S, HP
 animtype  = hard
 damage    = 40, 12

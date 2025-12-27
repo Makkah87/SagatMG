@@ -838,7 +838,7 @@ trigger3 = stateno = [3000,3999)
 trigger3 = movecontact
 trigger4 = stateno = 100 || stateno = 101
 trigger5 = stateno = [1060,1070] 
-trigger5 = !ishelper && time >= 8
+trigger5 = !ishelper && time >= 15
 trigger6 = stateno = [1080,1090]
 trigger6 = !ishelper && time >= 8
 trigger7 = stateno = 2000
