@@ -18,6 +18,26 @@ v = 1
 value = 2
 supermovetime = 9999
 
+[State 4000, Zoom]
+type = zoom
+trigger1 = time < 30
+scale = 1.4
+lag = 0.8
+pos = root,pos x, root,pos y
+stagebound = 1
+camerabound = 0
+ignorehitpause = 1
+
+[State 4000, Zoom]
+type = zoom
+trigger1 = time >= 30
+scale = 1.0
+lag = 0.8
+pos = 0,0
+stagebound = 1
+camerabound = 0
+ignorehitpause = 1
+
 [State 3050, RedBG]
 type = bgpalfx
 trigger1 = time = 0
@@ -90,7 +110,7 @@ supermovetime = 9999
 
 [State 123, Destroy]
 type = destroyself
-trigger1 = time = 30
+trigger1 = time = 40
 supermovetime = 9999
 ;============================
 ;Power Epicenter
@@ -119,7 +139,7 @@ supermovetime = 9999
 type = angledraw
 trigger1 = 1
 value = (time)*-4
-scale = 1,1 ;2.8-fvar(1),2.8-fvar(1)
+;scale = 1,1 ;2.8-fvar(1),2.8-fvar(1)
 supermovetime = 9999
 
 [State 1061, Trans]
