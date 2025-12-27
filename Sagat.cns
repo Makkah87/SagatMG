@@ -6807,7 +6807,7 @@ statetype = A
 [State 3010, width]
 type = width
 trigger1 = 1
-value = -12, 0
+value = 15, 0
 
 [State 3010, UCantHitMe]
 type = NotHitBy
@@ -8471,7 +8471,7 @@ statetype = A
 [State 3010, width]
 type = width
 trigger1 = 1
-value = -5, 0
+value = 15, 0
 
 [State 3010, UCantHitMe]
 type = NotHitBy
@@ -8524,7 +8524,7 @@ air.type = low
 ground.slidetime = 20
 ground.hittime  = 20
 ground.velocity = -6
-guard.velocity = -4
+guard.velocity = -8
 air.velocity =  -6, -3
 airguard.velocity = -6, -4
 air.fall = 1
@@ -8565,7 +8565,7 @@ ground.type = Low
 air.type = low
 ground.slidetime = 20
 ground.hittime  = 20
-ground.velocity = -6
+ground.velocity = -8
 guard.velocity = -4
 air.velocity =  -6, -3
 airguard.velocity = -6, -4
@@ -8608,7 +8608,7 @@ air.type = High
 ground.slidetime = 20
 ground.hittime  = 20
 ground.velocity = -6
-guard.velocity = -4
+guard.velocity = -8
 air.velocity =  -6, -3
 airguard.velocity = -6, -4
 envshake.time = 10
@@ -8650,7 +8650,7 @@ air.type = High
 ground.slidetime = 20
 ground.hittime  = 20
 ground.velocity = -6
-guard.velocity = -4
+guard.velocity = -8
 air.velocity =  -6, -3
 airguard.velocity = -6, -4
 envshake.time = 10
