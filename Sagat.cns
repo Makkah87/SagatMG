@@ -5337,9 +5337,9 @@ ground.type = high
 air.type = low
 ground.slidetime = 20
 ground.hittime  = 20
-ground.velocity = -5.5,-8.5
+ground.velocity = -3.5,-9.5
 guard.velocity = -7.5
-air.velocity = -5.5,-8.5
+air.velocity = -3.5,-9.5
 airguard.velocity = -5, -4
 envshake.time = 5
 envshake.ampl = 4
@@ -6703,7 +6703,6 @@ ctrl = 1
 type    = S
 movetype= A
 physics = S
-juggle  = 6
 velset = 0,0
 anim = 3010
 ctrl = 0
@@ -6804,11 +6803,6 @@ type = statetypeset
 trigger1 = animelem = 5
 statetype = A
 
-[State 3010, width]
-type = width
-trigger1 = 1
-value = 15, 0
-
 [State 3010, UCantHitMe]
 type = NotHitBy
 trigger1 = time = 0
@@ -6848,7 +6842,7 @@ damage    = 44, 10
 getpower  = 0
 priority  = 4
 guardflag = MA
-hitflag = MA
+hitflag = MAF
 pausetime = 4,10
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -50)
@@ -6861,7 +6855,7 @@ ground.slidetime = 20
 ground.hittime  = 20
 ground.velocity = -6
 guard.velocity = -4
-air.velocity =  -6, -3
+air.velocity =  -2, -4
 airguard.velocity = -6, -4
 air.fall = 1
 envshake.time = 10
@@ -6890,7 +6884,7 @@ damage    = 44, 10
 getpower  = 0
 priority  = 4
 guardflag = MA
-hitflag = MA
+hitflag = MAF
 pausetime = 4,8
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -110)
@@ -6932,7 +6926,7 @@ damage    = 44, 10
 getpower  = 0
 priority  = 4
 guardflag = MA
-hitflag = MA
+hitflag = MAF
 pausetime = 4,8
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -110)
@@ -6974,7 +6968,7 @@ damage    = 44, 10
 getpower  = 0
 priority  = 4
 guardflag = MA
-hitflag = MA
+hitflag = MAF
 pausetime = 4,8 ;4,10
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -110)
@@ -7083,7 +7077,6 @@ ctrl = 0
 type    = S
 movetype= A
 physics = S
-juggle  = 17
 velset = 0,0
 anim = 3012
 ctrl = 0
@@ -7148,6 +7141,7 @@ guard.ctrltime = 12
 damage    = 29,10
 priority  = 5
 guardflag = MA
+hitflag = MAF
 pausetime = 9,7 ;10,8
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 80), 120 + (var(38):= -50)
@@ -7188,6 +7182,7 @@ guard.ctrltime = 12
 damage    = 15,3
 priority  = 5
 guardflag = MA
+hitflag = MAF
 pausetime = 9,7 ;8,6
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -150)
@@ -7226,6 +7221,7 @@ guard.ctrltime = 12
 damage    = 15,3
 priority  = 5
 guardflag = MA
+hitflag = MAF
 pausetime = 9,7
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -200)
@@ -8354,7 +8350,6 @@ ctrl = 0
 type    = S
 movetype= A
 physics = S
-juggle  = 6
 velset = 0,0
 anim = 3010
 ctrl = 0
@@ -8468,11 +8463,6 @@ type = statetypeset
 trigger1 = animelem = 5
 statetype = A
 
-[State 3010, width]
-type = width
-trigger1 = 1
-value = 15, 0
-
 [State 3010, UCantHitMe]
 type = NotHitBy
 trigger1 = time = 0
@@ -8512,7 +8502,7 @@ damage    = 45, 10
 getpower  = 0
 priority  = 4
 guardflag = M
-hitflag = MA
+hitflag = MAF
 pausetime = 4,10
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -50)
@@ -8554,7 +8544,7 @@ damage    = 45, 10
 getpower  = 0
 priority  = 4
 guardflag = M
-hitflag = MA
+hitflag = MAF
 pausetime = 4,8
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -110)
@@ -8596,7 +8586,7 @@ damage    = 39, 10
 getpower  = 0
 priority  = 4
 guardflag = M
-hitflag = MA
+hitflag = MAF
 pausetime = 4,8
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -110)
@@ -8638,7 +8628,7 @@ damage    = 60, 10
 getpower  = 0
 priority  = 4
 guardflag = M
-hitflag = MA
+hitflag = MAF
 pausetime = 4,8 ;4,10
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -110)
@@ -8649,9 +8639,9 @@ ground.type = High
 air.type = High
 ground.slidetime = 20
 ground.hittime  = 20
-ground.velocity = -6
+ground.velocity = -4
 guard.velocity = -8
-air.velocity =  -6, -3
+air.velocity =  -2, -5
 airguard.velocity = -6, -4
 envshake.time = 10
 envshake.ampl = 4
@@ -8740,7 +8730,6 @@ ctrl = 0
 type    = S
 movetype= A
 physics = S
-juggle  = 17
 velset = 0,0
 anim = 3012
 ctrl = 0
@@ -8805,6 +8794,7 @@ guard.ctrltime = 12
 damage    = 38,10
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 8,6 ;10,8
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 80), 120 + (var(38):= -50)
@@ -8817,7 +8807,7 @@ fall.animtype = low
 ground.slidetime = 12
 ground.hittime  = 15
 ground.velocity = -5,0
-air.velocity = 0,-8
+air.velocity = 0,-4
 guard.velocity = -5
 envshake.time = 10
 envshake.ampl = 4
@@ -8845,6 +8835,7 @@ guard.ctrltime = 12
 damage    = 38,3
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 8,6 ;8,6
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -150)
@@ -8857,7 +8848,7 @@ ground.slidetime = 12
 ground.hittime  = 15
 ground.velocity = -5,0
 guard.velocity = -5
-air.velocity = 0,-9
+air.velocity = 0,-5
 envshake.time = 10
 envshake.ampl = 4
 envshake.freq = 176
@@ -8884,6 +8875,7 @@ guard.ctrltime = 19
 damage    = 38,3
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 8,6
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -200)
@@ -8896,7 +8888,7 @@ ground.type = High
 ground.slidetime = 12
 ground.hittime  = 30
 ground.velocity = -2,0
-air.velocity = -2.3,-12
+air.velocity = -2.3,-8
 guard.velocity = -3
 envshake.time = 10
 envshake.ampl = 4
@@ -9043,7 +9035,6 @@ ctrl = 0
 type    = S
 movetype= A
 physics = S
-juggle  = 17
 velset = 0,0
 anim = 3032
 ctrl = 0
@@ -9109,6 +9100,7 @@ guard.ctrltime = 12
 damage    = 38,10
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 7,5 ;10,8
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 90), 120 + (var(38):= -100)
@@ -9147,6 +9139,7 @@ guard.ctrltime = 12
 damage    = 38,3
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 7,5 ;8,6
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -200)
@@ -9185,6 +9178,7 @@ guard.ctrltime = 12
 damage    = 38,10
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 7,5
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -200)
@@ -9222,6 +9216,7 @@ guard.ctrltime = 12
 damage    = 38,9
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 7,5 ;12,12
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -200)
@@ -9259,6 +9254,7 @@ guard.ctrltime = 12
 damage    = 38,9
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 7,5 ;12,12
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -200)
@@ -9296,6 +9292,7 @@ guard.ctrltime = 12
 damage    = 38,9
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 7,5 ;12,12
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -200)
@@ -9333,6 +9330,7 @@ guard.ctrltime = 12
 damage    = 38,9
 priority  = 5
 guardflag = M
+hitflag = MAF
 pausetime = 6,4 ;12,12
 sparkno =(var(35):=8011)*0+-1
 sparkxy = -10 + (var(37):= 40), 120 + (var(38):= -200)
@@ -10508,7 +10506,7 @@ trigger1 = animelemtime(23) = 2 && anim = 0
 value = 0,0
 volume = 255
 
-[State 52, longjumpreset]
+[State -2, longjumpreset]
 type = varset
 trigger1 = movetype = H && var(12) = 1
 v = 12

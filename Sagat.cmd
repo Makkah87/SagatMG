@@ -837,11 +837,9 @@ trigger2 = movecontact
 trigger3 = stateno = [3000,3999)
 trigger3 = movecontact
 trigger4 = stateno = 100 || stateno = 101
-trigger5 = stateno = [1060,1070] 
-trigger5 = !ishelper && time >= 15
-trigger6 = stateno = [1080,1090]
-trigger6 = !ishelper && time >= 8
-trigger7 = stateno = 2000
+trigger5 = stateno = [1060,1070] && time >= 5
+trigger6 = stateno = [1080,1090] && time >= 5
+trigger7 = stateno = 2000 && time >= 5
 trigger8 = stateno = 3005 && time >= 5
 ;----------------------------------------------------------------------
 ;Ground Tiger Cannon Lv.3
@@ -877,11 +875,10 @@ trigger2 = movecontact
 trigger3 = stateno = [3000,3999)
 trigger3 = movecontact
 trigger4 = stateno = 100 ||stateno = 101
-trigger5 = stateno = [1060,1070] 
-trigger5 = !ishelper && time >= 8
-trigger6 = stateno = [1080,1090]
+trigger5 = stateno = [1060,1070] && time >= 5
+trigger6 = stateno = [1080,1090] && time >= 5
 trigger6 = !ishelper && time >= 8
-trigger7 = stateno = 2000
+trigger7 = stateno = 2000 && time >= 5
 trigger8 = stateno = 3000 && time >= 5
 ;====================================================================
 ;This is not a move, but it sets up var(4) to be 1 if conditions are right
@@ -945,6 +942,7 @@ trigger3 = (stateno = 200) || (stateno = 210) || (stateno = 220) && movecontact
 trigger4 = (stateno = 400) || (stateno = 410) || (stateno = 430) || (stateno = 440) && movecontact
 trigger5 = stateno = 100 || stateno = 101
 trigger6 = stateno = 702 && movecontact
+trigger7 = stateno = 2005 && time >= 5
 ;----------------------------------------------------------------------
 ;Ground Tiger Shot EX
 [State -1, Ground Tiger Shot EX]
@@ -959,6 +957,7 @@ trigger3 = (stateno = 200) || (stateno = 210) || (stateno = 220) && movecontact
 trigger4 = (stateno = 400) || (stateno = 410) || (stateno = 430) || (stateno = 440) && movecontact
 trigger5 = stateno = 100 || stateno = 101
 trigger6 = stateno = 702 && movecontact
+trigger7 = stateno = 2000 && time >= 5
 ;----------------------------------------------------------------------
 
 ;======================================================================

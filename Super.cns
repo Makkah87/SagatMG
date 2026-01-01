@@ -21,7 +21,7 @@ supermovetime = 9999
 [State 4000, Zoom]
 type = zoom
 trigger1 = time < 30
-scale = 1.4
+scale = 1.2
 lag = 0.8
 pos = root,pos x, root,pos y
 stagebound = 1
@@ -105,7 +105,7 @@ type = palfx
 trigger1 = time = 0
 mul = 350,350,350
 sinadd = -255,-255,-255,200
-time = 30
+time = 40
 supermovetime = 9999
 
 [State 123, Destroy]
