@@ -364,14 +364,6 @@ ctrl = 0
 sprpriority = 6
 ignorehitpause = 0
 
-[State 8033, Guardshake]
-type = envshake
-trigger1 = time = 0
-time = 4
-ampl = 6
-freq = 176
-ignorehitpause = 1
-
 [State 8033, Scale]
 type = angledraw
 trigger1 = 1
@@ -410,14 +402,6 @@ anim = 8033
 ctrl = 0
 sprpriority = 6
 ignorehitpause = 0
-
-[State 8034, Guardshake]
-type = envshake
-trigger1 = time = 0
-time = 4
-ampl = 6
-freq = 176
-ignorehitpause = 1
 
 [State 8034, Scale]
 type = angledraw

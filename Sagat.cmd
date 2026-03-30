@@ -126,115 +126,6 @@ name = "holdstart"
 command = /s
 time = 1
 
-;--- None of your own command definitions should be above this line. ---
-
-;-| CPU |--------------------------------------------------------------
-; Note that if you make any changes to the basic one-button or recovery
-; commands, you'll need to make the same changes to their matching commands here
-; and/or in the XOR VarSet controller.  That includes things like, for example:
-;  * changing the recovery command to use a different combination of buttons.
-;  * renaming the b button command as "d", or the start button command as "s".
-;  * switching the button names around, e.g. so button y triggers "a" and button a triggers "y".
-;  * having more than one way to trigger the same command name.
-; If you understand how the XOR method works, the proper changes should be obvious.
-; If you don't understand it, then simply disable the lines in the XOR VarSet
-; controller that correspond to the commands you've altered.
-
-[Command]
-name = "a2"
-command = a
-time = 1
-
-[Command]
-name = "b2"
-command = b
-time = 1
-
-[Command]
-name = "c2"
-command = c
-time = 1
-
-[Command]
-name = "x2"
-command = x
-time = 1
-
-[Command]
-name = "y2"
-command = y
-time = 1
-
-[Command]
-name = "z2"
-command = z
-time = 1
-
-[Command]
-name = "start2"
-command = s
-time = 1
-
-[Command]
-name = "holdfwd2"
-command = /$F
-time = 1
-
-[Command]
-name = "holdback2"
-command = /$B
-time = 1
-
-[Command]
-name = "holdup2"
-command = /$U
-time = 1
-
-[Command]
-name = "holddown2"
-command = /$D
-time = 1
-
-[Command]
-name = "holda2"
-command = /a
-time = 1
-
-[Command]
-name = "holdb2"
-command = /b
-time = 1
-
-[Command]
-name = "holdc2"
-command = /c
-time = 1
-
-[Command]
-name = "holdx2"
-command = /x
-time = 1
-
-[Command]
-name = "holdy2"
-command = /y
-time = 1
-
-[Command]
-name = "holdz2"
-command = /z
-time = 1
-
-[Command]
-name = "holdstart2"
-command = /s
-time = 1
-
-[Command]
-name = "recovery2"
-command = x+y
-time = 1
-
 ;-| Super Motions |----------------------------------------------------------------------
 [Command]
 name = "genocideL3"
@@ -735,16 +626,6 @@ time = 1
 ; 2. State entry
 ;----------------------------------------------------------------------
 [Statedef -1]
-
-[State -1, AI Helper Check]
-type = ChangeState
-trigger1 = IsHelper(9741)
-value = 9741
-
-[State -1, AI Helper Check 2]
-type = ChangeState
-trigger1 = IsHelper(9742)
-value = 9742
 
 ;======================================================================
 ;Player
