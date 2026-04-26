@@ -10,6 +10,23 @@ ctrl = 0
 sprpriority = 6
 ignorehitpause = 0
 
+[State 8000, Counter Spark]
+type = explod
+triggerall = !time
+trigger1 = root, MoveCountered
+trigger2 = root, Movetype = H
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,0
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
+
 [State 8000, Hitsound Punch]
 type = playsnd
 trigger1 = !time && (parent,stateno = 200 || parent, stateno = 400 || parent, stateno = 600)
@@ -54,6 +71,23 @@ ctrl = 0
 sprpriority = 6
 ignorehitpause = 0
 
+[State 8001, Counter Spark]
+type = explod
+triggerall = !time
+trigger1 = root, MoveCountered
+trigger2 = root, Movetype = H
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,0
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
+
 [State 8001, Hitsound Punch]
 type = playsnd
 trigger1 = !time && (parent,stateno = 210 || parent, stateno = 410 || parent, stateno = 610)
@@ -97,6 +131,23 @@ anim = 8002
 ctrl = 0
 sprpriority = 6
 ignorehitpause = 0
+
+[State 8002, Counter Spark]
+type = explod
+triggerall = !time
+trigger1 = root, MoveCountered
+trigger2 = root, Movetype = H
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,0
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
 
 [State 8002, Hitsound Punch]
 type = playsnd
@@ -143,6 +194,23 @@ anim = 8003
 ctrl = 0
 sprpriority = 6
 ignorehitpause = 0
+
+[State 8010, Counter Spark]
+type = explod
+triggerall = !time
+trigger1 = root, MoveCountered
+trigger2 = root, Movetype = H
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,0
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
 
 [State 8000, Scale]
 type = angledraw
@@ -203,6 +271,23 @@ anim = 8003
 ctrl = 0
 sprpriority = 6
 ignorehitpause = 0
+
+[State 8011, Counter Spark]
+type = explod
+triggerall = !time
+trigger1 = root, MoveCountered
+trigger2 = root, Movetype = H
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,0
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
 
 [State 8011, Scale]
 type = angledraw

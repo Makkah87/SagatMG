@@ -19,6 +19,7 @@ st      = Sagat.cns   ;States
 st1	= Super.cns   ;Super Art Effects
 st2	= Flames.cns  ;Fire 'n shit
 st3	= Hitsparks.cns
+st4 = sagat.zss
 stcommon = common1.cns   ;Common states
 sprite  = Sagat.sff   ;Sprite
 anim    = Sagat.air   ;Animation

@@ -4490,7 +4490,7 @@ type = HitDef
 trigger1 = Time = 0
 attr = S, SP
 animtype  = hard
-damage    = 58, 13
+damage    = 0, 13
 getpower  = 0
 priority  = 4
 guardflag = MA
@@ -4526,6 +4526,27 @@ air.cornerpush.veloff = 0
 down.cornerpush.veloff = 0
 airguard.cornerpush.veloff = 0
 guard.cornerpush.veloff = 0
+
+[State 1071, Damage]
+type = targetlifeadd
+triggerall = numtarget
+trigger1 = movehit && movehitvar(frame) = 1
+value = -58*parent,map(damage_scale)
+
+[State 1071, Counter]
+type = explod
+trigger1 = MoveCountered
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,-20
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
 
 [State 1061, End]
 type = destroyself
@@ -4563,7 +4584,6 @@ ignorehitpause = 1
 type = null;assertspecial
 trigger1 = !numtarget
 flag = invisible
-
 
 [State 8100, moveguarded]
 type = varset
@@ -4787,7 +4807,7 @@ type = HitDef
 trigger1 = Time = 0
 attr = S, SP
 animtype  = hard
-damage    = 66, 13
+damage    = 0, 13
 getpower  = 10
 priority  = 4
 guardflag = MA
@@ -4822,6 +4842,27 @@ air.cornerpush.veloff = 0
 down.cornerpush.veloff = 0
 airguard.cornerpush.veloff = 0
 guard.cornerpush.veloff = 0
+
+[State 1071, Counter]
+type = explod
+trigger1 = MoveCountered
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,-20
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
+
+[State 1066, Damage]
+type = targetlifeadd
+triggerall = numtarget
+trigger1 = movehit && movehitvar(frame) = 1
+value = -66*parent,map(damage_scale)
 
 [State 1066, End]
 type = destroyself
@@ -4963,7 +5004,7 @@ type = HitDef
 trigger1 = Time = 0
 attr = S, SP
 animtype  = hard
-damage    = 73, 13
+damage    = 0, 13
 getpower  = 0
 priority  = 4
 guardflag = MA
@@ -4998,6 +5039,27 @@ air.cornerpush.veloff = 0
 down.cornerpush.veloff = 0
 airguard.cornerpush.veloff = 0
 guard.cornerpush.veloff = 0
+
+[State 1071, Damage]
+type = targetlifeadd
+triggerall = numtarget
+trigger1 = movehit && movehitvar(frame) = 1
+value = -73*parent,map(damage_scale)
+
+[State 1071, Counter]
+type = explod
+trigger1 = MoveCountered
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,-20
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
 
 [State 1071, End]
 type = destroyself
@@ -5180,17 +5242,10 @@ trigger1 = time = 0
 value = 2000,0
 volume = 255
 
-[State 2000, Blink Yellow]
-type = PalFX
-trigger1 = Time = 0
-time = 42
-add = 64,32,0
-sinadd = 64,32,5,3
-
-[State 2010, Afterimage]
+[State 2000, Afterimage]
 type = AfterImage
 trigger1 = Time = 0
-length = 20
+length = 15
 PalBright   =  60, 60,  0
 PalContrast =  70, 170, 20
 PalAdd      = 0,0,0
@@ -5340,7 +5395,7 @@ type = HitDef
 trigger1 = hitcount < 2 && parent, var(7) = 0
 attr = S, SP
 animtype  = hard
-damage    = 40, 12
+damage    = 0, 12
 getpower  = 0
 priority  = 4
 guardflag = M
@@ -5377,6 +5432,27 @@ down.cornerpush.veloff = 0
 airguard.cornerpush.veloff = 0
 guard.cornerpush.veloff = 0
 p1sprpriority = 5
+
+[State 2001, Damage]
+type = targetlifeadd
+triggerall = numtarget
+trigger1 = movehit && movehitvar(frame) = 1
+value = -40*parent,map(damage_scale)
+
+[State 1071, Counter]
+type = explod
+trigger1 = MoveCountered
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,-20
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
 
 [State 2001, Reset]
 type = varset
@@ -5490,17 +5566,10 @@ trigger1 = time = 0
 value = 2000,0
 volume = 255
 
-[State 2005, Blink Yellow]
-type = PalFX
-trigger1 = Time = 0
-time = 42
-add = 64,32,0
-sinadd = 64,32,5,3
-
-[State 2010, Afterimage]
+[State 2005, Afterimage]
 type = AfterImage
 trigger1 = Time = 0
-length = 20
+length = 15
 PalBright   =  60, 60,  0
 PalContrast =  70, 170, 20
 PalAdd      = 0,0,0
@@ -5682,17 +5751,10 @@ trigger1 = Time = 0
 value = 210,2
 volume = 255
 
-[State 2010, Blink Yellow]
-type = PalFX
-trigger1 = Time = 0
-time = 110
-add = 64,32,0
-sinadd = 64,32,5,3
-
 [State 2010, Afterimage]
 type = AfterImage
 trigger1 = Time = 0
-length = 20
+length = 15
 PalBright   =  60, 60,  0
 PalContrast =  70, 170, 20
 PalAdd      = 0,0,0
@@ -5757,8 +5819,13 @@ ownpal = 1
 [State 2011, Velset]
 type = Velset
 trigger1 = time = 2
-y = -15.2
-x = 5
+y = -15.9
+x = 2
+
+[State 2011, Velset]
+type = Veladd
+trigger1 = time = [2,6]
+x = 0.33
 
 [State 2011, Stop]
 type = velset
@@ -5777,8 +5844,8 @@ y = 0.85
 
 [State 2011, 5]
 type = HitDef
-trigger1 = animelem = 1
-attr = S, SA
+trigger1 = !time
+attr = A, SA
 animtype  = Hard
 guard.ctrltime = 12
 damage    = 29,10
@@ -5812,12 +5879,11 @@ air.cornerpush.veloff = 0
 down.cornerpush.veloff = 0
 airguard.cornerpush.veloff = 0
 guard.cornerpush.veloff = 0
-mindist = 50
 
 [State 1021, 5]
 type = HitDef
-trigger1 = animelem = 2
-attr = S, SA
+trigger1 = animelem = 3 && uniqhitcount < 5
+attr = A, SA
 animtype  = Hard
 guard.ctrltime = 12
 damage    = 15,3
@@ -5826,7 +5892,7 @@ guardflag = MA
 pausetime = 6,4 ;12,12
 guardsound = s300,3
 sparkno =(var(35):=8010)*0+-1
-sparkxy = 150 + (var(37):= 40), 120 + (var(38):= -190)
+sparkxy = 50 + (var(37):= 40), 120 + (var(38):= -190)
 Guard.Sparkno = var(36):=8033
 hitsound   = s250,6
 guardsound = s250,3
@@ -5851,46 +5917,6 @@ air.cornerpush.veloff = -5
 down.cornerpush.veloff = 0
 airguard.cornerpush.veloff = 0
 guard.cornerpush.veloff = 0
-mindist = 50
-
-[State 1021, 5]
-type = HitDef
-trigger1 = animelem = 3
-attr = S, SA
-animtype  = Hard
-guard.ctrltime = 12
-damage    = 15,3
-priority  = 5
-guardflag = MA
-pausetime = 6,4 ;12,12
-guardsound = s300,3
-sparkno =(var(35):=8010)*0+-1
-sparkxy = 110 + (var(37):= 40), 120 + (var(38):= -190)
-Guard.Sparkno = var(36):=8033
-hitsound   = s250,6
-guardsound = s250,3
-ground.type = High
-ground.slidetime = 12
-ground.hittime  = 15
-ground.velocity = -2,-12
-air.velocity = -2,-9.5
-guard.velocity = -12
-envshake.time = 10
-envshake.ampl = 4
-envshake.freq = 176
-fall.recover = 0
-fall = 1
-fall.envshake.time = 10
-fall.envshake.ampl = 4
-fall.envshake.freq = 176
-yaccel = 0.60
-getpower = 0
-ground.cornerpush.veloff = 0
-air.cornerpush.veloff = -5
-down.cornerpush.veloff = 0
-airguard.cornerpush.veloff = 0
-guard.cornerpush.veloff = 0
-mindist = 50
 
 [State 1021, 5]
 type = HitDef
@@ -5972,7 +5998,7 @@ mindist = 50
 
 [State 2011, Decent]
 type = changeanim
-trigger1 = anim = 2011 && vel y > 0
+trigger1 = anim = 2011 && vel y > 1.2
 value = 2012
 
 [State 2011, StopX]
@@ -6047,17 +6073,10 @@ trigger1 = time = 0
 v = 14
 value = 1
 
-[State 2020, Blink Yellow]
-type = PalFX
-trigger1 = Time = 0
-time = 110
-add = 64,32,0
-sinadd = 64,32,5,3
-
-[State 2010, Afterimage]
+[State 2020, Afterimage]
 type = AfterImage
 trigger1 = Time = 0
-length = 20
+length = 15
 PalBright   =  60, 60,  0
 PalContrast =  70, 170, 20
 PalAdd      = 0,0,0
@@ -6463,7 +6482,7 @@ type = HitDef
 trigger1 = hitcount < 4; && parent, var(7) = 0
 attr = S, HP
 animtype  = hard
-damage    = 40, 12
+damage    = 0, 12
 getpower  = 0
 priority  = 4
 guardflag = M
@@ -6498,6 +6517,27 @@ down.cornerpush.veloff = 0
 airguard.cornerpush.veloff = 0
 guard.cornerpush.veloff = 0
 p1sprpriority = 5
+
+[State 1071, Counter]
+type = explod
+trigger1 = MoveCountered
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,-20
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
+
+[State 3001, Damage]
+type = targetlifeadd
+triggerall = numtarget
+trigger1 = movehit && movehitvar(frame) = 1
+value = -40*parent,map(damage_scale)
 
 [State 3001, Guardshake]
 type = envshake
@@ -7813,7 +7853,7 @@ type = HitDef
 trigger1 = hitcount < 6 && parent, var(7) = 0
 attr = S, HP
 animtype  = hard
-damage    = 66, 15
+damage    = 0, 15
 getpower  = 0
 priority  = 4
 guardflag = M
@@ -7855,6 +7895,27 @@ palfx.time = 40 ;20
 palfx.add = 217,61,0
 palfx.sinadd = -255,-255,-255,160 ; 40
 palfx.color = 20
+
+[State 1071, Damage]
+type = targetlifeadd
+triggerall = numtarget
+trigger1 = movehit && movehitvar(frame) = 1
+value = -66*parent,map(damage_scale)
+
+[State 1071, Counter]
+type = explod
+trigger1 = MoveCountered
+anim = 8005
+ID = 8005
+Postype =  p1
+pos = 0,-20
+removetime = 11
+supermovetime = 18
+pausemovetime = 255
+sprpriority = 10
+ontop = 1
+shadow = 0
+ownpal = 1
 
 [State 3500, Burn Baby!]
 type = Helper
@@ -10474,8 +10535,9 @@ value = 190
 [State -2, Debug data]
 type = displaytoclipboard
 trigger1 = time >= 0
-text = "FVar(1) = %f,Var(36) =%d, var(19) = %d, fall recover = %d"
-params = Fvar(1), Var(36), var(19),gethitvar(fall.recovertime)
+text = "damage_scale =%f,scale_factor =%f,P2Dist X = %f,P2Dist Y = %f,facing = %d,p2facing = %d,Special State = %f, Super_State = %f, Target ID = %f,By Makkah/Master Gouken"
+params = map(damage_scale),map(scale_factor),P2Dist X,P2Dist Y,facing, p2,facing, map(special_cancel), map(super_cancel), map(target_id)
+ignorehitpause = 1
 
 
 [State -2, Hit Detection]
@@ -10593,7 +10655,7 @@ trigger1 =time=0&&movetype=H&&(prevstateno = 900||prevstateno = 901)
 channel = 6
 
 [State -2, Effect begone]
-type = removeexplod
+type = null;removeexplod
 trigger1 = Movetype = H && numexplod(8053) = 0 && numexplod(8052) = 0
 
 [State -2, Super C]
@@ -10627,26 +10689,6 @@ ownpal = 1
 stateno = 9000
 id = 9000
 ignorehitpause = 1
-
-;Damage dampener
-[State -2, Damage based on hits]
-type=varset
-trigger1= numenemy
-fvar(12)= ifelse(enemynear,gethitvar(hitcount)<3, 24, ifelse(enemynear,gethitvar(hitcount)>=24, 2, 28-enemynear,gethitvar(hitcount))) / 24.0
-ignorehitpause=1
-
-[State -2, Reset var when the opponent recovers]
-type=varset
-trigger1= numenemy
-trigger1= (enemynear,movetype!=H)
-trigger2= !numenemy
-fvar(12)=1
-
-[State -2, Dampener itself]
-type=attackmulset
-trigger1= 1
-value=fvar(12)
-ignorehitpause=1
 
 [State -2, AirPushReset]
 type = varset
@@ -10820,22 +10862,6 @@ trigger1 = 1
 v = 6
 value = hitcount
 ignorehitpause = 1
-
-[State -3, Var(6)Re-Set]
-type = null;varset
-trigger1 = enemynear,movetype !=H
-v = 6
-value = 0
-
-[State -3, Damagedampener]
-type = null;AttackMulSet
-trigger1 = Var(6)>=2 && stateno != 3000
-value = 0.5 ;(10-(Var(6)+2))*0.10
-
-[State -3, DampenerDe-activate]
-type = null;AttackMulSet
-trigger1 = Var(6) = 0
-value = 1.0
 
 [State 1071, NoJuggle]
 type = varset

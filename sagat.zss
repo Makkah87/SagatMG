@@ -1,0 +1,159 @@
+[StateDef -4]
+
+if P2, MoveType = A && Movetype = A{
+	AssertSpecial{
+		flag: runfirst;
+	}
+}
+
+###############################################################
+# Counter Effects
+###############################################################
+##|Counter Hit Damage Boost|##
+map(counter_damage):= (hitdefvar(hitdamage)*0.2)*-1;
+
+ignorehitpause{
+	if numtarget && movecountered && target, time = 0{
+		TargetLifeAdd{
+			Value: map(counter_damage);
+		}
+	}
+
+}
+
+#Counter Hit PalFX
+ignorehitpause{
+	if MoveCountered = 1{
+		PalFX{
+			time: 5;
+			add: 255, 255, 255;
+			mul: 130, 130, 130;
+			RedirectID: P2,ID;
+		}
+
+	}
+
+}
+
+###############################################################
+# Damage Scaling
+###############################################################
+#Decrease Timer (Timer is no longer used for resets, but I'm keeping this in case I need it for something)
+if map(scale_factor) > 0 && NumHelper(4000) = 0 {
+	MapAdd{
+		map: "scale_factor_timer";
+		value: -1;
+	}
+}
+
+	if map(scale_factor_timer) < 0 {
+		MapSet{
+			map: "scale_factor_timer";
+			value: 0;
+		}
+	}
+
+##Attack State Scale Factor -- Normals and Specials##
+if time = 1 && (stateno = [200,699] || (stateno = 1000 || stateno = 1010 || stateno = 1020) || (stateno = [1030,1050])) || (ishelper && stateno < 3000){
+	MapAdd{
+		map: "scale_factor";
+		value: 1;
+	}
+
+		MapSet{
+		map: "scale_factor_timer";
+		value: 30;
+	}
+}
+
+##Attack State Scale Factor -- EX##
+if time = 1 && ((stateno = 2010) || stateno = 2020){
+	MapAdd{
+		map: "scale_factor";
+		value: 2;
+	}
+	
+		MapSet{
+		map: "scale_factor_timer";
+		value: 25;
+	}
+}
+
+##Super Scale Factor is set in the super spark Helper
+
+##Reset 
+if p2, anim = [120,152] || (p2,movetype != H && movetype != A){
+	MapSet{
+		map: "scale_factor";
+		value: 0;
+	}
+
+	MapSet{
+		map: "damage_scale";
+		value: 1;
+	}
+}
+
+##|Decrease Damage Percentage|##
+if map(scale_factor) > 2{
+	MapSet{
+		map: "damage_scale";
+		value: 1 - ((map(scale_factor)-1)*0.1);
+	}
+}
+
+##|Implement Damage Scale|##
+AttackMulSet{
+	value: (map(damage_scale));
+}
+
+
+###############################################################
+# Low Health Scaling
+###############################################################
+# < 30%
+if life <= 308{
+		DefenceMulSet{
+			value: 1.1;
+			}
+		}
+# < 15%
+if life < 154{
+		DefenceMulSet{
+			value: 1.25;
+			}
+		}
+
+#Reset -- Primarily for debug purposes
+if life = LifeMax{
+	DefenceMulSet{
+		value: 1;
+	}
+}
+
+
+###############################################################
+# EX PalFX Flash
+###############################################################
+ignorehitpause{
+		if stateno = [2000,2999] && !IsHelper && !InCustomState{
+			MapAdd{
+				map: "palfx_timer";
+				value: 1;
+			}
+
+			##Timer Reset
+			if !time || Map(palfx_timer) > 100{
+				MapSet{
+					map: "palfx_timer";
+					value: 30;
+				}
+			}
+
+					PalFX{
+						time: 1;
+						add:  0, floor((sin(map(palfx_timer)*10)+1)*100), 0;
+						mul: 256, 256, 256;
+					}
+				}
+}

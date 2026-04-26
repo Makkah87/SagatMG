@@ -38,6 +38,18 @@ stagebound = 1
 camerabound = 0
 ignorehitpause = 1
 
+[State 4000, Super Scale Factor]
+type = ParentMapAdd
+trigger1 = !time
+map = "scale_factor"
+value = ifelse(root,prevstateno = [3000,3999],1,2)
+
+[State 4000, Super Scale Factor]
+type = ParentMapSet
+trigger1 = !time
+map = "scale_factor_timer"
+value = 30
+
 [State 3050, RedBG]
 type = bgpalfx
 trigger1 = time = 0
