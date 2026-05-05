@@ -23,7 +23,7 @@ ignorehitpause{
 
 #Counter Hit PalFX
 ignorehitpause{
-	if MoveCountered = 1 && !target, ishelper{
+	if MoveCountered = 1 && !HitOverridden && !P2, ishelper{
 		PalFX{
 			time: 5;
 			add: 255, 255, 255;
