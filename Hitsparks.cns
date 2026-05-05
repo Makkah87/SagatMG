@@ -13,7 +13,7 @@ ignorehitpause = 0
 [State 8000, Counter Spark]
 type = explod
 triggerall = !time
-trigger1 = root, MoveCountered
+trigger1 = root, MoveCountered && !p2, ishelper
 trigger2 = root, Movetype = H
 anim = 8005
 ID = 8005
@@ -74,7 +74,7 @@ ignorehitpause = 0
 [State 8001, Counter Spark]
 type = explod
 triggerall = !time
-trigger1 = root, MoveCountered
+trigger1 = root, MoveCountered && !p2, ishelper
 trigger2 = root, Movetype = H
 anim = 8005
 ID = 8005
@@ -135,7 +135,7 @@ ignorehitpause = 0
 [State 8002, Counter Spark]
 type = explod
 triggerall = !time
-trigger1 = root, MoveCountered
+trigger1 = root, MoveCountered && !p2, ishelper
 trigger2 = root, Movetype = H
 anim = 8005
 ID = 8005
@@ -198,7 +198,7 @@ ignorehitpause = 0
 [State 8010, Counter Spark]
 type = explod
 triggerall = !time
-trigger1 = root, MoveCountered
+trigger1 = root, MoveCountered && !p2, ishelper
 trigger2 = root, Movetype = H
 anim = 8005
 ID = 8005
@@ -275,7 +275,7 @@ ignorehitpause = 0
 [State 8011, Counter Spark]
 type = explod
 triggerall = !time
-trigger1 = root, MoveCountered
+trigger1 = root, MoveCountered && !p2, ishelper
 trigger2 = root, Movetype = H
 anim = 8005
 ID = 8005
